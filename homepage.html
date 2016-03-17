@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Medina's Junkyard</title>
+	</head>
+	
+	<body ng-app="myApp" ng-controller="myController">
+		<h1>Welcome to {{ firstName + " " +  lastName }}'s Junkyard!</h1>
+		<p>Your junk is our treasure!</p>
+		<p>Looking to donate your car?</p>
+		<form>
+			Are you donating?
+			<input type="checkbox" ng-model="Donate">
+		</form>
+		<form ng-show="Donate">
+			<h2>Congrats! You are donating your car!</h2>
+			<p>Let's get some information from you.</p>
+			First Name: <input type="text" ng-model="customer.firstName" /><br />
+			Last Name: <input type="text" ng-model="customer.lastName" /><br />
+			Date of Birth (MMDDYYYY): <input type="text" ng-model="customer.birthdate" /><br />
+			<input type="submit" ng-click="update(customer)" value="Submit" />
+		</form>
+		<pre> customer = {{ customer | json }}</pre>
+		<pre> donator = {{ donator | json }}</pre>
+	
+		<script src="./js/angular.min.js"></script>
+		<script src="./modules/module.js"></script>
+	</body>
+</html>
