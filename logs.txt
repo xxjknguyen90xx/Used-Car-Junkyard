@@ -1,0 +1,7 @@
+/* This file is intended to be used for the tracking of edits/changes to this project. */
+
+17 MARCH 2016:
+- Created Used Car Junkyard project
+- Created homepage.html
+- Created module.js
+- Downloaded and linked angular.min.js
